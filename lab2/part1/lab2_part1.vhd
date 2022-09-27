@@ -16,8 +16,8 @@ entity lab2_part1 is
 end lab2_part1;
 
 architecture dosth of lab2_part1 is
-signal carry: std_logic_vector (7 downto 0);
-signal sum: std_logic_vector (7 downto 0);
+signal carry: std_logic_vector (7 downto 0) := "00000000";
+signal sum: std_logic_vector (7 downto 0) := "00000000";
 begin
     stage0: fulladd port map ('0', swa(0), swb(0), sum(0), carry(0));
 	 stage1: fulladd port map (carry(0), swa(1), swb(1), sum(1), carry(1));
@@ -30,5 +30,8 @@ begin
 	 
 	 hex1_out: hex port map (sum(7), sum(6), sum(5), sum(4), hex1(0), hex1(1), hex1(2), hex1(3), hex1(4), hex1(5), hex1(6));
 	 hex2_out: hex port map (sum(3), sum(2), sum(1), sum(0), hex2(0), hex2(1), hex2(2), hex2(3), hex2(4), hex2(5), hex2(6));
+	 
+	 led <= carry(6) xor carry(7);
+	 
 	 
 end dosth;

@@ -60,6 +60,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "led",
+					"strict" : false
+				},
+				{
 					"name" : "swa[6]",
 					"strict" : false
 				},

@@ -28,10 +28,9 @@ begin
 	 stage6: fulladd port map (carry(5), swa(6), swb(6), sum(6), carry(6));
 	 stage7: fulladd port map (carry(6), swa(7), swb(7), sum(7), carry(7));
 	 
-	 hex1_out: hex port map (sum(7), sum(6), sum(5), sum(4), hex1(0), hex1(1), hex1(2), hex1(3), hex1(4), hex1(5), hex1(6));
-	 hex2_out: hex port map (sum(3), sum(2), sum(1), sum(0), hex2(0), hex2(1), hex2(2), hex2(3), hex2(4), hex2(5), hex2(6));
+	 hex1_out: hex port map (sum(0), sum(1), sum(2), sum(3), hex1(0), hex1(1), hex1(2), hex1(3), hex1(4), hex1(5), hex1(6));
+	 hex2_out: hex port map (sum(4), sum(5), sum(6), sum(7), hex2(0), hex2(1), hex2(2), hex2(3), hex2(4), hex2(5), hex2(6));
 	 
 	 led <= carry(6) xor carry(7);
-	 
 	 
 end dosth;

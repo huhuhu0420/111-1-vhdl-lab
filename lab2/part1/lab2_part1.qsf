@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY lab2_part1
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:29:32  SEPTEMBER 27, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -77,7 +77,7 @@ set_location_assignment PIN_E17 -to hex1[2]
 set_location_assignment PIN_L26 -to hex1[3]
 set_location_assignment PIN_L25 -to hex1[4]
 set_location_assignment PIN_J22 -to hex1[5]
-set_location_assignment PIN_H22 -to hex2[6]
+set_location_assignment PIN_H22 -to hex1[6]
 set_location_assignment PIN_M24 -to hex2[0]
 set_location_assignment PIN_Y22 -to hex2[1]
 set_location_assignment PIN_W21 -to hex2[2]

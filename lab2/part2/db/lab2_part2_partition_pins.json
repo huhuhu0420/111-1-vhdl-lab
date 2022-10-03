@@ -64,15 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "swa[2]",
-					"strict" : false
-				},
-				{
-					"name" : "swb[2]",
-					"strict" : false
-				},
-				{
 					"name" : "swa[1]",
+					"strict" : false
+				},
+				{
+					"name" : "swb[1]",
 					"strict" : false
 				},
 				{
@@ -84,7 +80,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "swb[1]",
+					"name" : "swa[2]",
+					"strict" : false
+				},
+				{
+					"name" : "swb[2]",
 					"strict" : false
 				},
 				{
@@ -96,10 +96,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "swa[5]",
-					"strict" : false
-				},
-				{
 					"name" : "swa[4]",
 					"strict" : false
 				},
@@ -108,15 +104,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "swa[5]",
+					"strict" : false
+				},
+				{
 					"name" : "swb[5]",
 					"strict" : false
 				},
 				{
-					"name" : "swa[6]",
+					"name" : "swb[6]",
 					"strict" : false
 				},
 				{
-					"name" : "swb[6]",
+					"name" : "swa[6]",
 					"strict" : false
 				},
 				{

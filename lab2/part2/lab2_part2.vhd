@@ -31,6 +31,6 @@ begin
 	 hex1_out: hex port map (sum(0), sum(1), sum(2), sum(3), hex1(0), hex1(1), hex1(2), hex1(3), hex1(4), hex1(5), hex1(6));
 	 hex2_out: hex port map (sum(4), sum(5), sum(6), sum(7), hex2(0), hex2(1), hex2(2), hex2(3), hex2(4), hex2(5), hex2(6));
 	 
-	 led <= carry(6) xor carry(7);
+	 led <= not carry(7);
 	 
 end dosth;

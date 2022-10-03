@@ -10,7 +10,7 @@ package lab2_package is
 	end component fulladd;
 	component hex
 		port (
-			x, w, y, z: in std_logic;
+			z, y, x, w: in std_logic;
 			a, b, c, d, e, f, g: out std_logic
 		);
 	end component hex;

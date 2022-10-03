@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab2_part1
-Sun Oct  2 19:08:37 2022
+Mon Oct  3 17:38:31 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -14,11 +14,10 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "fulladd:stage7"
- 10. Port Connectivity Checks: "fulladd:stage0"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "fulladd:stage0"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -45,13 +44,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct  2 19:08:37 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct  3 17:38:31 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; lab2_part1                                  ;
 ; Top-level Entity Name              ; lab2_part1                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 28                                          ;
-;     Total combinational functions  ; 28                                          ;
+; Total logic elements               ; 30                                          ;
+;     Total combinational functions  ; 30                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 31                                          ;
@@ -181,16 +180,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------------+
 ; Resource                                    ; Usage            ;
 +---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 28               ;
+; Estimated Total logic elements              ; 30               ;
 ;                                             ;                  ;
-; Total combinational functions               ; 28               ;
+; Total combinational functions               ; 30               ;
 ; Logic element usage by number of LUT inputs ;                  ;
 ;     -- 4 input functions                    ; 17               ;
-;     -- 3 input functions                    ; 9                ;
+;     -- 3 input functions                    ; 11               ;
 ;     -- <=2 input functions                  ; 2                ;
 ;                                             ;                  ;
 ; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 28               ;
+;     -- normal mode                          ; 30               ;
 ;     -- arithmetic mode                      ; 0                ;
 ;                                             ;                  ;
 ; Total registers                             ; 0                ;
@@ -201,10 +200,10 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                  ;
 ; Embedded Multiplier 9-bit elements          ; 0                ;
 ;                                             ;                  ;
-; Maximum fan-out node                        ; fulladd:stage6|s ;
+; Maximum fan-out node                        ; fulladd:stage3|s ;
 ; Maximum fan-out                             ; 7                ;
-; Total fan-out                               ; 144              ;
-; Average fan-out                             ; 1.60             ;
+; Total fan-out                               ; 151              ;
+; Average fan-out                             ; 1.64             ;
 +---------------------------------------------+------------------+
 
 
@@ -213,14 +212,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+-------------+--------------+
-; |lab2_part1                ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |lab2_part1                ; lab2_part1  ; work         ;
+; |lab2_part1                ; 30 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |lab2_part1                ; lab2_part1  ; work         ;
 ;    |fulladd:stage0|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|fulladd:stage0 ; fulladd     ; work         ;
 ;    |fulladd:stage1|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|fulladd:stage1 ; fulladd     ; work         ;
 ;    |fulladd:stage2|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|fulladd:stage2 ; fulladd     ; work         ;
 ;    |fulladd:stage3|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|fulladd:stage3 ; fulladd     ; work         ;
 ;    |fulladd:stage4|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|fulladd:stage4 ; fulladd     ; work         ;
 ;    |fulladd:stage5|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|fulladd:stage5 ; fulladd     ; work         ;
-;    |fulladd:stage6|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|fulladd:stage6 ; fulladd     ; work         ;
+;    |fulladd:stage6|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|fulladd:stage6 ; fulladd     ; work         ;
 ;    |fulladd:stage7|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|fulladd:stage7 ; fulladd     ; work         ;
 ;    |hex:hex1_out|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|hex:hex1_out   ; hex         ; work         ;
 ;    |hex:hex2_out|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab2_part1|hex:hex2_out   ; hex         ; work         ;
@@ -243,15 +242,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fulladd:stage7"                                                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +--------------------------------------------+
 ; Port Connectivity Checks: "fulladd:stage0" ;
 +------+-------+----------+------------------+
@@ -267,15 +257,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 31                          ;
-; cycloneiii_lcell_comb ; 29                          ;
-;     normal            ; 29                          ;
-;         0 data inputs ; 1                           ;
+; cycloneiii_lcell_comb ; 30                          ;
+;     normal            ; 30                          ;
 ;         2 data inputs ; 2                           ;
-;         3 data inputs ; 9                           ;
+;         3 data inputs ; 11                          ;
 ;         4 data inputs ; 17                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 5.00                        ;
+; Average LUT depth     ; 5.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -294,7 +283,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sun Oct  2 19:08:28 2022
+    Info: Processing started: Mon Oct  3 17:38:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2_part1 -c lab2_part1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -310,22 +299,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file hex.vhd
 Info (12021): Found 1 design units, including 0 entities, in source file lab2_package.vhd
     Info (12022): Found design unit 1: lab2_package File: /home/huhuhu/code/vhdl/lab2/part1/lab2_package.vhd Line: 4
 Info (12127): Elaborating entity "lab2_part1" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at lab2_part1.vhd(13): used implicit default value for signal "led" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/huhuhu/code/vhdl/lab2/part1/lab2_part1.vhd Line: 13
 Info (12128): Elaborating entity "fulladd" for hierarchy "fulladd:stage0" File: /home/huhuhu/code/vhdl/lab2/part1/lab2_part1.vhd Line: 22
 Info (12128): Elaborating entity "hex" for hierarchy "hex:hex1_out" File: /home/huhuhu/code/vhdl/lab2/part1/lab2_part1.vhd Line: 31
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led" is stuck at GND File: /home/huhuhu/code/vhdl/lab2/part1/lab2_part1.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 59 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 61 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 28 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 431 megabytes
-    Info: Processing ended: Sun Oct  2 19:08:37 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21061): Implemented 30 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 429 megabytes
+    Info: Processing ended: Mon Oct  3 17:38:31 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:23
 
 

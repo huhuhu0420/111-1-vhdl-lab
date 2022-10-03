@@ -60,35 +60,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "swa[6]",
-					"strict" : false
-				},
-				{
-					"name" : "swb[6]",
-					"strict" : false
-				},
-				{
-					"name" : "swa[5]",
-					"strict" : false
-				},
-				{
-					"name" : "swb[5]",
-					"strict" : false
-				},
-				{
-					"name" : "swa[4]",
-					"strict" : false
-				},
-				{
-					"name" : "swb[4]",
-					"strict" : false
-				},
-				{
-					"name" : "swa[3]",
+					"name" : "led",
 					"strict" : false
 				},
 				{
 					"name" : "swb[3]",
+					"strict" : false
+				},
+				{
+					"name" : "swa[3]",
 					"strict" : false
 				},
 				{
@@ -113,6 +93,30 @@
 				},
 				{
 					"name" : "swa[1]",
+					"strict" : false
+				},
+				{
+					"name" : "swa[4]",
+					"strict" : false
+				},
+				{
+					"name" : "swb[4]",
+					"strict" : false
+				},
+				{
+					"name" : "swa[5]",
+					"strict" : false
+				},
+				{
+					"name" : "swb[5]",
+					"strict" : false
+				},
+				{
+					"name" : "swa[6]",
+					"strict" : false
+				},
+				{
+					"name" : "swb[6]",
 					"strict" : false
 				},
 				{

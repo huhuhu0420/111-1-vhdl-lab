@@ -1,5 +1,5 @@
 Timing Analyzer report for lab2_part2
-Sun Oct  2 20:02:28 2022
+Mon Oct  3 17:35:18 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -272,20 +272,20 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
-; swa[2]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; swb[2]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swa[1]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; swb[1]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swa[0]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swb[0]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; swb[1]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; swa[2]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; swb[2]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swa[3]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swb[3]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; swa[5]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swa[4]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swb[4]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; swa[5]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swb[5]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; swa[6]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swb[6]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; swa[6]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swa[7]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; swb[7]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -501,7 +501,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sun Oct  2 20:02:27 2022
+    Info: Processing started: Mon Oct  3 17:35:17 2022
 Info: Command: quartus_sta lab2_part2 -c lab2_part2
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -549,8 +549,8 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 565 megabytes
-    Info: Processing ended: Sun Oct  2 20:02:28 2022
+    Info: Peak virtual memory: 562 megabytes
+    Info: Processing ended: Mon Oct  3 17:35:18 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

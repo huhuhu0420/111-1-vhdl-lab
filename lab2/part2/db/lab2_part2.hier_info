@@ -29,7 +29,7 @@ hex2[3] <= hex:hex2_out.d
 hex2[4] <= hex:hex2_out.e
 hex2[5] <= hex:hex2_out.f
 hex2[6] <= hex:hex2_out.g
-led <= led.DB_MAX_OUTPUT_PORT_TYPE
+led <= fulladd:stage7.cout
 
 
 |lab2_part2|fulladd:stage0

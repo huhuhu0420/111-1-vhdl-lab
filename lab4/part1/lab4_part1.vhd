@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all; 
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+use work.lab4_package.all;
+
+entity lab4_part1 is
+    port (
+		b: in std_logic_vector(6 downto 0);
+		a: in std_logic_vector(6 downto 0);
+		opcode: in std_logic_vector(3 downto 0);
+
+		set: out std_logic;
+		
+		hex1: out std_logic_vector (6 downto 0);
+		hex2: out std_logic_vector (6 downto 0)
+		--led: out std_logic
+    );
+end lab4_part1;
+
+architecture dosth of lab4_part1 is
+
+signal willcarryin:std_logic_vector(7 downto 0) := "00000000";
+signal result: std_logic_vector(7 downto 0) := "00000000";
+signal less: std_logic_vector(6 downto 0) := "0000000";
+signal inless: std_logic := '0';
+signal finalres0: std_logic := '0';
+signal insideSet: std_logic := '0';
+begin
+
+	willcarryin(0) <= opcode(1) and opcode(2);
+	inless <= opcode(1) and opcode(2) and opcode(3);
+	G1: FOR i IN 0 TO 6 GENERATE
+		Dev_ri:oneBitAlu PORT MAP (a(i),b(i), less(i), willcarryin(i), opcode, result(i), willcarryin(i+1));
+		
+		G2: IF  (i = 6 ) GENERATE
+			
+			--result(i) <= willcarryin(i+1);	
+			set <= not willcarryin(7);
+			insideSet <= not willcarryin(7);
+		END GENERATE G2;
+	END GENERATE G1;
+
+	MUXless: mux port map (result(0),insideSet, inless,finalres0);
+	hex1_out: hex port map (finalres0, result(1), result(2), result(3), hex1(0), hex1(1), hex1(2), hex1(3), hex1(4), hex1(5), hex1(6));
+	hex2_out: hex port map (result(4), result(5), result(6), result(7), hex2(0), hex2(1), hex2(2), hex2(3), hex2(4), hex2(5), hex2(6));
+	
+end dosth;

@@ -40,19 +40,6 @@ begin
 				count <= count + 1;
 			end if;
 		end if;
-
-		-- if (rising_edge(clk_sec)) then
-		-- 	if (count_sec = 1) then
-		-- 		if clk_out = '0' then
-		-- 			clk_out <= '1';
-		-- 		else 
-		-- 			clk_out <= '0';
-		-- 		end if ;
-		-- 	else
-		-- 		count_sec <= count_sec + 1;
-		-- 	end if;
-		-- end if;
-	
 			if load ='0' then 
 				for i in 0 to N-1 loop
 					qo(i) <= di(i);

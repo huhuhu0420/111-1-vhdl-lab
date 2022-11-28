@@ -14,9 +14,6 @@ end lab6;
 architecture dosth of lab6 is
 	TYPE state_type is (start, s1, s2a, s2b, s3, s4);
 	
-
-    --attribute state: state_type;
-    --attribute state  ： signal is "000 001 010 011 100 101";
 	signal state : state_type := start;
 	signal counter : std_logic :='0';
 begin

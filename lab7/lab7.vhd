@@ -90,14 +90,14 @@ begin
 					nowSub <= "0" & nowSub(16 downto 1);
 					nowDivisor <= "0"&nowDivisor(16 downto 1);
 					case(repeat) is	
-						when 9 =>
-							repeat <=0;
+						when 8=>
 							w<='1';
 						when others=>
 							w <='0';
 							repeat <= repeat +1;
 					end case;
 					if w ='1' then
+						nowQuotient <= "0" & nowQuotient(7 downto 1) ;
 						state <= s4;
 						output <= "101";
 					else 
@@ -119,8 +119,8 @@ begin
 
 		end if;
 	end process;
-	remainder<= nowRemainder(16 downto 9);
-	quotient <= nowRemainder(8 downto 1);
+	remainder<= nowRemainder(7 downto 0);
+	quotient <= nowQuotient(7 downto 0);
 	--quotient <= nowQuotient; 
 
 	--remainder <= remainderBuffer(7 downto 0);
@@ -130,6 +130,5 @@ begin
 	--hexr1: hex port map(remainderBuffer(12),remainderBuffer(13),remainderBuffer(14),remainderBuffer(15),hex3(0),hex3(1),hex3(2),hex3(3),hex3(4),hex3(5),hex3(6));
 	hexr0: hex port map(nowQuotient(0),nowQuotient(1),nowQuotient(2),nowQuotient(3),hex2(0),hex2(1),hex2(2),hex2(3),hex2(4),hex2(5),hex2(6));
 	hexr1: hex port map(nowQuotient(4),nowQuotient(5),nowQuotient(6),nowQuotient(7),hex3(0),hex3(1),hex3(2),hex3(3),hex3(4),hex3(5),hex3(6));
-	
 	
 end dosth;

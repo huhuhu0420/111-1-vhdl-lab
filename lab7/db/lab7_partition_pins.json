@@ -192,6 +192,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "dividend[0]",
+					"strict" : false
+				},
+				{
 					"name" : "dividend[1]",
 					"strict" : false
 				},
@@ -221,10 +225,6 @@
 				},
 				{
 					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "dividend[0]",
 					"strict" : false
 				},
 				{

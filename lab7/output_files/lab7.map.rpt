@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab7
-Mon Dec  5 17:21:18 2022
+Mon Dec  5 17:44:49 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -10,7 +10,17 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |lab7|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |lab7
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +47,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Dec  5 17:21:18 2022           ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec  5 17:44:49 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; lab7                                        ;
 ; Top-level Entity Name              ; lab7                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 195                                         ;
+;     Total combinational functions  ; 195                                         ;
+;     Dedicated logic registers      ; 84                                          ;
+; Total registers                    ; 84                                          ;
+; Total pins                         ; 65                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -149,11 +159,166 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                        ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                 ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+; lab7.vhd                         ; yes             ; User VHDL File  ; /home/huhuhu/code/vhdl/lab7/lab7.vhd         ;         ;
+; hex.vhd                          ; yes             ; User VHDL File  ; /home/huhuhu/code/vhdl/lab7/hex.vhd          ;         ;
+; lab7_package.vhd                 ; yes             ; User VHDL File  ; /home/huhuhu/code/vhdl/lab7/lab7_package.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 195     ;
+;                                             ;         ;
+; Total combinational functions               ; 195     ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 60      ;
+;     -- 3 input functions                    ; 54      ;
+;     -- <=2 input functions                  ; 81      ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 132     ;
+;     -- arithmetic mode                      ; 63      ;
+;                                             ;         ;
+; Total registers                             ; 84      ;
+;     -- Dedicated logic registers            ; 84      ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 65      ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; counter ;
+; Maximum fan-out                             ; 84      ;
+; Total fan-out                               ; 928     ;
+; Average fan-out                             ; 2.27    ;
++---------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |lab7                      ; 195 (167)           ; 84 (84)                   ; 0           ; 0            ; 0       ; 0         ; 65   ; 0            ; |lab7               ; lab7        ; work         ;
+;    |hex:hexq0|             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab7|hex:hexq0     ; hex         ; work         ;
+;    |hex:hexq1|             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab7|hex:hexq1     ; hex         ; work         ;
+;    |hex:hexr0|             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab7|hex:hexr0     ; hex         ; work         ;
+;    |hex:hexr1|             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab7|hex:hexr1     ; hex         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |lab7|state                                                        ;
++-------------+----------+----------+-----------+-----------+----------+-------------+
+; Name        ; state.s4 ; state.s3 ; state.s2b ; state.s2a ; state.s1 ; state.start ;
++-------------+----------+----------+-----------+-----------+----------+-------------+
+; state.start ; 0        ; 0        ; 0         ; 0         ; 0        ; 0           ;
+; state.s1    ; 0        ; 0        ; 0         ; 0         ; 1        ; 1           ;
+; state.s2a   ; 0        ; 0        ; 0         ; 1         ; 0        ; 1           ;
+; state.s2b   ; 0        ; 0        ; 1         ; 0         ; 0        ; 1           ;
+; state.s3    ; 0        ; 1        ; 0         ; 0         ; 0        ; 1           ;
+; state.s4    ; 1        ; 0        ; 0         ; 0         ; 0        ; 1           ;
++-------------+----------+----------+-----------+-----------+----------+-------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; nowDivisor[16]                        ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 84    ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 72    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |lab7|nowDivisor[8]        ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |lab7|nowRemainder[11]     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |lab7|nowRemainder[3]      ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |lab7|nowQuotient[1]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |lab7 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 65                          ;
+; cycloneiii_ff         ; 84                          ;
+;     ENA               ; 63                          ;
+;     ENA SCLR          ; 1                           ;
+;     ENA SLD           ; 8                           ;
+;     plain             ; 12                          ;
+; cycloneiii_lcell_comb ; 195                         ;
+;     arith             ; 63                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 32                          ;
+;     normal            ; 132                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 45                          ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 60                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 3.01                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,7 +327,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Mon Dec  5 17:21:10 2022
+    Info: Processing started: Mon Dec  5 17:44:41 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab7 -c lab7
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -174,16 +339,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file hex.vhd
     Info (12023): Found entity 1: hex File: /home/huhuhu/code/vhdl/lab7/hex.vhd Line: 6
 Info (12021): Found 1 design units, including 0 entities, in source file lab7_package.vhd
     Info (12022): Found design unit 1: lab7_package File: /home/huhuhu/code/vhdl/lab7/lab7_package.vhd Line: 4
-Error (10309): VHDL Interface Declaration error in lab7.vhd(127): interface object "remainder" of mode out cannot be read. Change object mode to buffer. File: /home/huhuhu/code/vhdl/lab7/lab7.vhd Line: 127
-Error (10577): VHDL error at lab7.vhd(127): actual port "remainder" of mode "out" cannot be associated with formal port "z" of mode "in" File: /home/huhuhu/code/vhdl/lab7/lab7.vhd Line: 127
-Error (10600): VHDL error at lab7.vhd(127): can't read value of interface object "remainder" of mode OUT File: /home/huhuhu/code/vhdl/lab7/lab7.vhd Line: 127
-Error (10577): VHDL error at lab7.vhd(127): actual port "remainder" of mode "out" cannot be associated with formal port "y" of mode "in" File: /home/huhuhu/code/vhdl/lab7/lab7.vhd Line: 127
-Error (10577): VHDL error at lab7.vhd(127): actual port "remainder" of mode "out" cannot be associated with formal port "x" of mode "in" File: /home/huhuhu/code/vhdl/lab7/lab7.vhd Line: 127
-Error (10577): VHDL error at lab7.vhd(127): actual port "remainder" of mode "out" cannot be associated with formal port "w" of mode "in" File: /home/huhuhu/code/vhdl/lab7/lab7.vhd Line: 127
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 1 warning
-    Error: Peak virtual memory: 422 megabytes
-    Error: Processing ended: Mon Dec  5 17:21:18 2022
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:20
+Info (12127): Elaborating entity "lab7" for the top level hierarchy
+Info (12128): Elaborating entity "hex" for hierarchy "hex:hexq0" File: /home/huhuhu/code/vhdl/lab7/lab7.vhd Line: 127
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 262 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 47 output pins
+    Info (21061): Implemented 197 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 436 megabytes
+    Info: Processing ended: Mon Dec  5 17:44:49 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:21
 
 

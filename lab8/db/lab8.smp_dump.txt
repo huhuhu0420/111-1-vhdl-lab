@@ -1,0 +1,11 @@
+
+State Machine - |lab8|state
+Name state.load state.slt state.sub2 state.sub1 state.andand state.add state.move state.done 
+state.done 0 0 0 0 0 0 0 0 
+state.move 0 0 0 0 0 0 1 1 
+state.add 0 0 0 0 0 1 0 1 
+state.andand 0 0 0 0 1 0 0 1 
+state.sub1 0 0 0 1 0 0 0 1 
+state.sub2 0 0 1 0 0 0 0 1 
+state.slt 0 1 0 0 0 0 0 1 
+state.load 1 0 0 0 0 0 0 1 
